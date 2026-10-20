@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Матвей — тренер по дзюдо, мастер спорта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101015;
+      --panel: #191920;
+      --line: #2a2a34;
+      --text: #f4f4f7;
+      --muted: #b0b0be;
+      --red: #e11d2e;
+      --red-dark: #b8121f;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 58rem; margin: 0 auto; padding: 0 1.5rem; }
+    .display { font-family: "Barlow Condensed", Impact, "Arial Narrow", sans-serif; }
+
+    /* Главный экран */
+    .hero { padding: 5rem 0 6rem; }
+    .hero .wrap { border-left: 8px solid var(--red); padding-left: 1.5rem; }
+    .eyebrow {
+      margin: 0 0 1rem;
+      font-weight: 700;
+      font-size: clamp(1.3rem, 4vw, 1.75rem);
+      color: var(--red);
+    }
+    h1 {
+      margin: 0 0 1.25rem;
+      font-weight: 800;
+      font-size: clamp(3.2rem, 12vw, 7rem);
+      line-height: 0.95;
+    }
+    .lead { max-width: 36rem; margin: 0 0 2.25rem; color: var(--muted); }
+
+    .btn {
+      display: inline-block;
+      padding: 1.1rem 2.75rem;
+      background: var(--red);
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.3rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.15s ease;
+    }
+    .btn:hover { background: var(--red-dark); }
+    a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    /* Разделы */
+    section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+    h2 {
+      margin: 0 0 2rem;
+      font-weight: 800;
+      font-size: clamp(2.5rem, 8vw, 3.75rem);
+      line-height: 1;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 5px;
+      margin-top: 0.75rem;
+      background: var(--red);
+    }
+    .about { max-width: 40rem; margin: 0 0 1.25rem; color: var(--muted); }
+
+    /* Достижения */
+    .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+    .list li {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--panel);
+      border-left: 6px solid var(--red);
+      border-radius: 0 8px 8px 0;
+    }
+    .list .place { min-width: 10rem; font-weight: 700; font-size: 2rem; }
+    .list .name { color: var(--muted); }
+
+    /* Отзывы */
+    .reviews { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+    blockquote {
+      margin: 0;
+      padding: 1.5rem;
+      background: var(--panel);
+      border-top: 5px solid var(--red);
+      border-radius: 0 0 8px 8px;
+    }
+    blockquote p { margin: 0 0 1rem; }
+    blockquote footer { color: var(--muted); font-size: 1.05rem; }
+    blockquote footer strong { color: var(--text); }
+
+    /* Контакты */
+    #contacts p { max-width: 34rem; margin: 0 0 1.75rem; color: var(--muted); }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .phone { color: var(--text); font-weight: 700; font-size: 1.75rem; text-decoration: none; }
+    .phone:hover { color: var(--red); }
+
+    .page-footer { padding: 2rem 0 3rem; color: var(--muted); font-size: 1rem; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ГЛАВНЫЙ ЭКРАН -->
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow display">Тренер по дзюдо, мастер спорта</p>
+      <h1 class="display">Дзюдо для вашего ребёнка</h1>
+      <p class="lead">Дисциплина, уверенность в себе и крепкое здоровье. Занятия проводит действующий спортсмен.</p>
+      <a class="btn" href="#contacts">Связаться</a>
+    </div>
+  </header>
+
+  <!-- ОБО МНЕ -->
+  <section id="about">
+    <div class="wrap">
+      <h2 class="display">Обо мне</h2>
+      <p class="about">Меня зовут Матвей, мне 18 лет, я мастер спорта по дзюдо. Тренируюсь каждый день, поэтому знаю, какой путь проходит спортсмен от первого занятия до побед на турнирах.</p>
+      <p class="about">Дзюдо учит держать себя в руках, не бояться трудностей и уважать соперника. Всё это пригодится вашему ребёнку не только на татами.</p>
+    </div>
+  </section>
+
+  <!-- ДОСТИЖЕНИЯ -->
+  <section id="achievements">
+    <div class="wrap">
+      <h2 class="display">Достижения</h2>
+      <ul class="list">
+        <li><span class="place display">Мастер спорта</span><span class="name">Дзюдо</span></li>
+        <li><span class="place display">1 место</span><span class="name">Турнир СФО</span></li>
+        <li><span class="place display">2 место</span><span class="name">Турнир СФО</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <!-- ВНИМАНИЕ: эти два отзыва вымышленные, это образцы. Перед публикацией замените их настоящими отзывами. -->
+  <section id="reviews">
+    <div class="wrap">
+      <h2 class="display">Отзывы</h2>
+      <div class="reviews">
+        <blockquote>
+          <p>«Сын стал увереннее и спокойнее. Тренер объясняет понятно и терпеливо, ребёнок ходит на занятия с удовольствием.»</p>
+          <footer><strong>Анна</strong>, мама Ильи, 9 лет</footer>
+        </blockquote>
+        <blockquote>
+          <p>«Дочка раньше стеснялась, а теперь сама собирает сумку на тренировку. Спасибо за внимание к каждому ребёнку.»</p>
+          <footer><strong>Сергей</strong>, папа Алисы, 8 лет</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts">
+    <div class="wrap">
+      <h2 class="display">Контакты</h2>
+      <p>Напишите или позвоните — отвечу на вопросы и расскажу, как всё устроено.</p>
+      <div class="contact-row">
+        <a class="btn" href="https://t.me/ваш_ник">Написать в Telegram</a>
+        <a class="phone display" href="tel:+70000000000">+7 (000) 000-00-00</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-footer">
+    <div class="wrap">© Матвей, 2026</div>
+  </div>
+
+</body>
+</html>
